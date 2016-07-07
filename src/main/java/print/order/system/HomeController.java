@@ -1,17 +1,19 @@
 package print.order.system;
 
-import java.text.DateFormat;
-import java.util.Date;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.support.SessionStatus;
 
 /**
  * Handles requests for the application home page.
@@ -22,23 +24,35 @@ public class HomeController {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public String login(Locale locale, Model model) {
+		List<Map<String, Object>> list = jdbcTemplate
+				.queryForList("select * from ordertb inner join clienttb on ordertb.orderid = clienttb.orderid;");
+		model.addAttribute("db", list);
+		model.addAttribute("id", list.get(0).get("id"));
+		return "list";
+	}
 
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	@RequestMapping(value = "/menu", method = RequestMethod.GET)
+	public String logi(Locale locale, Model model) {
 
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		return "menu";
+	}
 
-		String formattedDate = dateFormat.format(date);
+	@RequestMapping(value = "/Frame", method = RequestMethod.GET)
+	public String log(Locale locale, Model model) {
 
-		model.addAttribute("serverTime", formattedDate);
+		return "Frame";
+	}
 
-		return "home";
+	@RequestMapping(params = "list", method = RequestMethod.POST)
+	public String bb(@ModelAttribute FormModel fm, Model model, SessionStatus sessionStatus, HttpSession session) {
+		List<Map<String, Object>> list = jdbcTemplate
+				.queryForList("select * from ordertb inner join clienttb on ordertb.orderid = clienttb.orderid;");
+		model.addAttribute("db", list);
+		model.addAttribute("id", list);
+
+		return "list";
 	}
 
 }
