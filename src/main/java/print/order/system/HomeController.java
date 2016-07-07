@@ -1,8 +1,5 @@
 package print.order.system;
 
-import java.util.List;
-import java.util.Map;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.support.SessionStatus;
 
 /**
  * Handles requests for the application home page.
@@ -21,18 +19,26 @@ public class HomeController {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
-	@RequestMapping(params = "inquiry", method = RequestMethod.POST)
-	public String aa(@ModelAttribute FormModel fm, Model model, HttpSession session) {
-		String quiry = fm.getUp();
+	@RequestMapping(params = "pro", method = RequestMethod.POST)
+	public String update(@ModelAttribute FormModel fm, Model model, SessionStatus sessionStatus, HttpSession session) {
+		int per = fm.getPercent();
 
-		List<Map<String, Object>> lista = jdbcTemplate.queryForList(
-				"select * from ordertb inner join clienttb on ordertb.orderid = clienttb.orderid where ordertb.orderid = "
-						+ "'" + quiry + "'");
-		model.addAttribute("data", lista);
-		session.setAttribute("Id", quiry);
-		model.addAttribute("id", quiry);
+		String id = (String) session.getAttribute("Id");
 
-		return "inquiry";
+		if (per > 100) {
+			return "ud_fail";
+		}
+		jdbcTemplate.execute("update ordertb set progress = '" + per + "' where orderid = '" + id + "'");
+
+		return "ud_suc";
+	}
+
+	@RequestMapping(params = "update", method = RequestMethod.POST)
+	public String up(@ModelAttribute FormModel fm, Model model, SessionStatus sessionStatus, HttpSession session) {
+		String number = fm.getUp();
+		session.setAttribute("Id", number);
+
+		return "update";
 	}
 
 }
