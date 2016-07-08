@@ -32,12 +32,4 @@
     <frame src=menu name="greenpage">
     <frame src=ud_suc name="orangepage">
   </frameset>
-  <frameset cols="28%,72%">
-    <frame src=menu name="greenpage">
-    <frame src=toppage name="orangepage">
-  </frameset>
-  <frameset cols="28%,72%">
-    <frame src=menu name="greenpage">
-    <frame src=toppage2 name="orangepage">
-  </frameset>
 </html>
