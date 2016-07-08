@@ -1,35 +1,43 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
- "http://www.w3.org/TR/html4/loose.dtd">
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page session="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+
 <html>
-<head>
 
-<title>タイトル</title>
+	<head>
 
-</head>
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>list</title>
+<style type="text/css">
+		p{
+	text-align: right;
+	margin-top: 50px;
+}
 
-  <frameset cols="28%,72%">
-    <frame src=menu name="greenpage">
-    <frame src=list name="orangepage">
-  </frameset>
-<frameset cols="28%,72%">
-    <frame src=menu name="greenpage">
-    <frame src=inquiry name="orangepage">
-  </frameset>
-  <frameset cols="28%,72%">
-    <frame src=menu name="greenpage">
-    <frame src=update name="orangepage">
-  </frameset>
-  <frameset cols="28%,72%">
-    <frame src=menu name="greenpage">
-    <frame src=up_fail name="orangepage">
-  </frameset>
-  <frameset cols="28%,72%">
-    <frame src=menu name="greenpage">
-    <frame src=ud_suc name="orangepage">
-  </frameset>
+
+
+</style>
+  </head>
+
+	<body>
+		<h1>登録一覧</h1>
+
+		<form:form modelAttribute="Formmodel">
+			<c:forEach items="${db}"  var="obj">
+				<c:if test="${obj.progress!=100}">
+			  		<br><input type ="radio" name = "up" value="${obj.orderid}" checked>
+			  		<c:out value="${obj.name}"/>
+			  		<c:out value="${obj.modelnumber}"/>
+			  		<c:out value="${obj.tel}"/>
+					[<c:out value="${obj.progress}"/>]%
+				</c:if>
+				</c:forEach>
+			<div>
+				<p><button name="inquiry" >詳細画面へ</button></p>
+				<p><button name="update" >更新する</button></p>
+			</div>
+		</form:form>
+	</body>
 </html>
