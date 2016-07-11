@@ -88,29 +88,4 @@ public class HomeController {
 		return "update";
 	}
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String loginn(Locale locale, Model model) {
-		return "home";
-	}
-
-	@RequestMapping(value = "/top", method = RequestMethod.GET)
-	public String top(Locale locale, Model model) {
-		return "top";
-	}
-
-	@RequestMapping(value = "/user", method = RequestMethod.GET)
-	public String user(Locale locale, Model model) {
-		return "user";
-	}
-
-	@RequestMapping(value = "/toppage", method = RequestMethod.GET)
-	public String admin(Locale locale, Model model) {
-		return "toppage";
-	}
-
-	@RequestMapping(value = "/login_fail", method = RequestMethod.GET)
-	public String error(Locale locale, Model model) {
-		return "login_fail";
-	}
-
 }
