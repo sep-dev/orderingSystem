@@ -10,16 +10,10 @@
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>list</title>
-<style type="text/css">
-		p{
-	text-align: right;
-	margin-top: 50px;
-}
-
-
-
+<style>
+		<%@ include file="../css/style.css" %>
 </style>
-  </head>
+ </head>
 
 	<body>
 		<h1>登録一覧</h1>
@@ -35,8 +29,8 @@
 				</c:if>
 				</c:forEach>
 			<div>
-				<p><button name="inquiry" >詳細画面へ</button></p>
-				<p><button name="update" >更新する</button></p>
+				<p class="list"><button name="inquiry" >詳細画面へ</button></p>
+				<p class="list"><button name="update" >更新する</button></p>
 			</div>
 		</form:form>
 	</body>
