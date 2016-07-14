@@ -27,9 +27,9 @@
 			  		<c:out value="${obj.tel}"/>
 					[<c:out value="${obj.progress}"/>]%
 				</c:if>
-				</c:forEach>
+				<br></c:forEach>
 			<div>
-				<p class="list"><button name="inquiry" >詳細画面へ</button></p>
+				<p class="list"><button type = "submit"name="inquiry" >詳細画面へ</button></p>
 				<p class="list"><button name="update" >更新する</button></p>
 			</div>
 		</form:form>

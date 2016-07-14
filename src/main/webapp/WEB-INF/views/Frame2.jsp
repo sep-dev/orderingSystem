@@ -11,12 +11,10 @@
 <title>タイトル</title>
 
 </head>
-<frameset cols="28%,72%">
-    <frame src=menu name="menu">
-    <frame src=toppage2 name="toppage2">
+
+  <frameset cols="28%,72%">
+    <frame src=menu2 name="menu2">
+    <frame src=toppage1 name="toppage1">
   </frameset>
-<frameset cols="28%,72%">
-    <frame src=menu name="menu">
-    <frame src=partsod name="partsod">
-  </frameset>
+
 </html>

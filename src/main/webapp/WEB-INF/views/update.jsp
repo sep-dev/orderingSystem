@@ -13,7 +13,7 @@
 	<h1>進捗率を更新します</h1>
 	<form:form modelAttribute="Formmodel">
 		<p class="update">
-			進捗率<input type="number" name="percent" size="2" maxlength="3"
+			進捗率<input type="number" name="percent" min="1" maxlength="3"
 				required>%
 		</p>
 

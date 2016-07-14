@@ -17,30 +17,33 @@
 		<c:forEach items="${data}" var="obj">
 
 			<p>
-				受注登録日
-				<c:out value="${obj.orderday}" />
+				受注登録日　2016年
+				<c:out value="${obj.orderday1}" />月
+				<c:out value="${obj.orderday2}" />日
 			</p>
 			<p>
 				納品完了予定日
-				<c:out value="${obj.completion}" />
+				<c:out value="${obj.completion1}" />年
+				<c:out value="${obj.completion2}" />月
+				<c:out value="${obj.completion3}" />日
 			</p>
 			<p class="middle">
 				<br>
 				<input type="hidden" name="up" value="${id}">
 				<br>品番
-				<c:out value="${obj.modelnumber}" />
+				<c:out value="${obj.modelnumber}" /><br>
 				<br>発注数
-				<c:out value="${obj.ordernumber}" />
+				<c:out value="${obj.ordernumber}" /><br>
 				<br>郵便番号
-				<c:out value="${obj.postalcode}" />
+				<c:out value="${obj.postalcode}" /><br>
 				<br>住所1
-				<c:out value="${obj.address1}" />
+				<c:out value="${obj.address1}" /><br>
 				<br>住所2
-				<c:out value="${obj.address2}" />
+				<c:out value="${obj.address2}" /><br>
 				<br>住所3
-				<c:out value="${obj.address3}" />
+				<c:out value="${obj.address3}" /><br>
 				<br>電話番号
-				<c:out value="${obj.tel}" />
+				<c:out value="${obj.tel}" /><br>
 			</p>
 
 					受注登録者  <c:out value="${obj.ordername}" />

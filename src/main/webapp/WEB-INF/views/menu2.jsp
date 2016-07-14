@@ -20,16 +20,10 @@
 <body bgcolor="#99ff99">
 
 <Div Align="center">
-				<form action="/system/Register" target="toppage2" method="POST">
-					<input type=submit value="発注登録">
+				<form action="/system/list" target="toppage1" method="GET">
+					<input type=submit value="進捗確認">
 				</form>
-  <br><form action="/system/partsod" target="toppage2" method="POST">
-					<input type=submit value="部品注文">
-				</form><br>
- <form action="/system/List Updates" target="toppage2" method="GET">
-					<input type=submit value="発送準備">
-  </form>
-  <br>
+
 </Div>
 </body>
 </html>
