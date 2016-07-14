@@ -20,7 +20,7 @@
 
 		<form:form modelAttribute="Formmodel">
 			<c:forEach items="${db}"  var="obj">
-				<c:if test="${obj.progress!=100}">
+				<c:if test="${obj.progress<=100}">
 			  		<br><input type ="radio" name = "up" value="${obj.orderid}" checked>
 			  		<c:out value="${obj.name}"/>
 			  		<c:out value="${obj.modelnumber}"/>
