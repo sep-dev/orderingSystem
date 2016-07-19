@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>発注商品登録画面</title>
+<title>受注商品登録画面</title>
 <link rel="stylesheet" type="text/css" href="resources/css/Register.css" />
 </head>
 <body bgcolor="#FFD5EC">
@@ -66,7 +66,7 @@
 				</p>
 				<div id="width">
 					<p class="mb1">
-						品番：<select name="order1">
+						品番<select name="order1">
 							<option value="1">PIXUS MG7730F</option>
 							<option value="2">PIXUS MG7730</option>
 							<option value="3">PIXUS MG6930</option>
@@ -77,11 +77,11 @@
 				</div>
 				<div id="width2">
 					<p class="mb1">
-						発注数<input type="number" name="order2" min="5" step="5">
+						受注数<input type="number" name="order2" min="5" step="5">
 					</p>
 				</div>
 				<p class="mb2">
-					登録者名<input type="text" name="name" placeholder="例：田中 幸子"
+					登録者名<input type="text" name="name" placeholder="例：高橋 健汰朗"
 					pattern="[^\x20-\x7E\uFF21-\uFF3A\uFF41-\uFF5A\uFF10-\uFF19]*">
 				</p>
 				<div id="width">
@@ -140,7 +140,7 @@
 					</select>日
 					</p>
 				</div>
-				<h3>※登録完了後の品番、発注数の変更はできません。</h3>
+				<h3>※登録完了後の品番、受注数の変更はできません。</h3>
 				<p class="submit" align="center">
 					<input type="submit" value="次へ">
 				</p>
