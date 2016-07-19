@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>発注商品登録画面</title>
+<title>受注商品登録画面</title>
 <link rel="stylesheet" type="text/css" href="resources/css/Register.css" />
 </head>
 <body bgcolor ="#FFD5EC">
@@ -77,7 +77,7 @@
 				</div>
 				<div id="width2">
 					<p class="mb1">
-						発注数<input type="number" name="order2" min="5" step="5">
+						受注数<input type="number" name="order2" min="5" step="5">
 					</p>
 				</div>
 				<p class="mb2">

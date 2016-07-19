@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
-<title>発注情報確認画面</title>
+<title>受注情報確認画面</title>
 <link rel="stylesheet" type="text/css" href="resources/css/Registersuccess.css" />
 </head>
 <body bgcolor ="#FFD5EC">
@@ -54,7 +54,7 @@
 
 				<input type="hidden" value="${hidden3}" name="hidden18">
 
-				<h3>※品番、発注数の変更はできませんがこれでよろしいでしょうか？</h3>
+				<h3>※品番、受注数の変更はできませんがこれでよろしいでしょうか？</h3>
 
 				<p align="center" class="submit1">
 					<input type="submit" value="登録完了">

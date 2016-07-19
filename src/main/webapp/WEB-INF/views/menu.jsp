@@ -21,7 +21,7 @@
 
 <Div Align="center">
 				<form action="/system/Register" target="toppage2" method="POST">
-					<input type=submit value="発注登録">
+					<input type=submit value="受注登録">
 				</form>
   <br><form action="/system/partsod" target="toppage2" method="POST">
 					<input type=submit value="部品注文">

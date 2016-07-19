@@ -64,7 +64,7 @@
 					<input type="hidden" value="${hidden9}" name="hidden9">
 				</div>
 				<p class="submit" align="center">
-					<input type="submit" value="発注完了">
+					<input type="submit" value="受注完了">
 				</p>
 			</form:form>
 		</div>
