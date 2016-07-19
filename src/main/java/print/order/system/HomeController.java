@@ -101,8 +101,12 @@ public class HomeController {
 
 		List<Map<String, Object>> log_password = jdbcTemplate.queryForList("select pass from logintb");
 		List<Map<String, Object>> log_usercode = jdbcTemplate.queryForList("select user from logintb");
+		List<Map<String, Object>> log_cou = jdbcTemplate.queryForList("select count(id) from logintb;");
 		session.setAttribute("ifid", log_id);
-		for (int i = 0; i < 6; i++) {
+		Object logincount = (log_cou.get(0).get("count(id)"));
+		String log_count = String.valueOf(logincount);
+		int log = Integer.parseInt(log_count);
+		for (int i = 0; i < log; i++) {
 			Object idlist = (log_usercode.get(i).get("user"));
 			Object passlist = (log_password.get(i).get("pass"));
 

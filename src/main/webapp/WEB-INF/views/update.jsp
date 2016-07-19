@@ -24,7 +24,7 @@
 			<br>
 			<br>
 			<input type="button" name="list" value="一覧画面へ"
-				onclick="location.href='http://localhost:8080/p/list'">
+				onclick="location.href='http://localhost:8080/system/list'">
 		</div>
 	</form:form>
 
