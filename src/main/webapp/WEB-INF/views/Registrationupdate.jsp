@@ -83,7 +83,7 @@
                                  onBlur="ShowFormGuide(this,'${obj.address3}');"></h4>
      </div>
 
-     <div id = "com1"><h4>電話番号:</h4></div>
+     <div id = "com1"><h4>電話番号(桁間-(ﾏｲﾅｽ)入力):例･･･000-0000-0000</h4></div>
      <div id = "com2"><h4><input type="text" name="tel" value="${obj.tel}"
                                  onFocus="HideFormGuide(this,'${obj.tel}');"
                                  onBlur="ShowFormGuide(this,'${obj.tel}');"></h4>
@@ -97,7 +97,7 @@
 
 
 </div>
-
+<h3>不備があった場合はタイトルに戻りますのでご了承ください</h3>
 <input type="hidden" name="id" value="${obj.orderid}">
 
 </form:form>
