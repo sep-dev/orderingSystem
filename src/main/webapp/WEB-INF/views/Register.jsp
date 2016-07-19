@@ -81,7 +81,7 @@
 					</p>
 				</div>
 				<p class="mb2">
-					登録者名<input type="text" name="name" placeholder="例：高橋 健汰朗"
+					登録者名<input type="text" name="name" placeholder="例：高橋 ケンシロウ"
 					pattern="[^\x20-\x7E\uFF21-\uFF3A\uFF41-\uFF5A\uFF10-\uFF19]*">
 				</p>
 				<div id="width">
