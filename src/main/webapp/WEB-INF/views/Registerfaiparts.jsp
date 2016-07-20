@@ -81,7 +81,7 @@
 					</p>
 				</div>
 				<p class="mb2">
-					登録者名<input type="text" name="name" value="${name}" placeholder="例：田中 幸子"
+					登録者名<input type="text" name="name" value="${name}" placeholder="例：高橋 ケンシロウ"
 					pattern="[^\x20-\x7E\uFF21-\uFF3A\uFF41-\uFF5A\uFF10-\uFF19]*">
 				</p>
 				<div id="width">
@@ -140,7 +140,7 @@
 					</select>日
 					</p>
 				</div>
-				<h3>※部品が足りなくて、作成できません。</h3>
+				<h3>※部品が不足しています。</h3>
 
 				<p class="submit" align="center">
 					<input type="submit" value="次へ">
